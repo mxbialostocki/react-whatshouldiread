@@ -1,16 +1,22 @@
 import React from 'react'
-import Single from './single'
-import Multi from './multi'
+import Header from './Header'
+import Home from './Home'
+// import Review from './Review'
+// import Reviews from './Reviews'
+// import Covers from './Covers'
+import Footer from './Footer'
 
-class Single extends React.Component {
+class Main extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Single />
-        <Multi />
+        <Header />
+        <Home />
+
+        <Footer />
       </React.Fragment>
     )
   }
 }
 
-export default Single
+export default Main

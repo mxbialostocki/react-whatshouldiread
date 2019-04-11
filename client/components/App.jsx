@@ -1,10 +1,15 @@
 import React from 'react'
-import Main from './main'
+import { Route } from 'react-router-dom'
+import Main from './Main'
 
 class App extends React.Component {
   render () {
     return (
-      <Main />
+      <React.Fragment>
+
+        <Route exact path='/' component={Main} />
+
+      </React.Fragment>
     )
   }
 }
