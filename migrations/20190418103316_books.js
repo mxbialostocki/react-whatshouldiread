@@ -9,7 +9,7 @@ exports.up = (knex, Promise) => {
     table.string('publisher')
     table.integer('publication_year')
     table.string('determination')
-  }
+  })
 };
 
 exports.down = (knex, Promise) => {
