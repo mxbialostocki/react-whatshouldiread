@@ -25,8 +25,9 @@ Subsequent features:
 6. Email yourself a recommendation for later
 7. Find an independant bookshop near you based on the location you are browsing from.
    - consider a seperate page listing recommended shops around the world.
+   - this would utilise an external api data to reference user view based on geographic location
 8. Configure how much information to display about a book in the single review field.
 9. Even if the review text is written in English, offer option to switch the basic functionality of the site to te reo.
 
 ## how does it work?
-React // Babel // 
+React // Babel // react-router-dom
