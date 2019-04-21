@@ -1,16 +1,12 @@
 import React from 'react'
-import Header from './Header'
-import Home from './Home'
-import Footer from './Footer'
+import Resting from './Resting'
+
 
 class Main extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Header />
-        <Home />
-
-        <Footer />
+<Resting />
       </React.Fragment>
     )
   }

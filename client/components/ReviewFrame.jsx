@@ -2,7 +2,7 @@ import React from 'react'
 import Review from './Review'
 import db from '../../db'
 
-class Home extends React.Component {
+class ReviewFrame extends React.Component {
   // onComponentDidMount()
 
   render () {
@@ -22,4 +22,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+export default ReviewFrame
