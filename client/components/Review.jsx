@@ -16,19 +16,19 @@ class Review extends React.Component {
     review_body: ''
   }
 
-  componentDidMount() {
+  componentDidMount () {
     retrieveAllTitles()
-    .then(bookData => {
-      const { jacket_image_path, title, author_first, author_last, publisher, publication_year } = bookData
-      this.setState({
-        jacket_image_path,
-        title,
-        author_first,
-        author_last,
-        publisher,
-        publication_year
+      .then(bookData => {
+        const { jacket_image_path, title, author_first, author_last, publisher, publication_year } = bookData
+        this.setState({
+          jacket_image_path,
+          title,
+          author_first,
+          author_last,
+          publisher,
+          publication_year
+        })
       })
-    })
   }
 
   render () {

@@ -5,9 +5,9 @@ class Header extends React.Component {
     return (
       <div>
         <ul id="nav-main">
-          <li><a href="#">just one book</a></li>
-          <li><a href="#">all / covers</a></li>
-          <li><a href="#"> all / list</a></li>
+          <li className="nav-child"><a href="/review">just one book</a></li>
+          <li className="nav-child"><a href="/allcovers">all / covers</a></li>
+          <li className="nav-child"><a href="/alllist"> all / list</a></li>
         </ul>
       </div>
     )

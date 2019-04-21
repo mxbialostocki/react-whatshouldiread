@@ -9,12 +9,12 @@ class ReviewFrame extends React.Component {
     return (
       <div>
 
-      <h1 className="resting-title">what should I read ?</h1>
-      <Review />
-      <button>fuck no</button>
-      <button>i want poetry</button>
-      <button>i want short stories</button>
-      <button>i want tangata whenua</button>
+        <h1 className="resting-title">what should I read ?</h1>
+        <Review />
+        <button>fuck no</button>
+        <button>i want poetry</button>
+        <button>i want short stories</button>
+        <button>i want tangata whenua</button>
 
       </div>
 

@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Route, Switch } from 'react-router-dom'
 
-import Review from './Review'
 import Reviews from './Reviews'
 import Resting from './Resting'
 import Main from './Main'
@@ -13,11 +12,11 @@ class AppRoutes extends React.Component {
     return (
       <div>
         <Switch>
-          
-        <Route exact path='/' component={Resting} />
-        <Route exact path='/main' component={Main} />
-        <Route exact path='/listReviews' component={Reviews} />
-          
+
+          <Route exact path='/' component={Resting} />
+          <Route exact path='/main' component={Main} />
+          <Route exact path='/listReviews' component={Reviews} />
+
         </Switch>
       </div>
     )
@@ -26,7 +25,7 @@ class AppRoutes extends React.Component {
 
 export default AppRoutes
 
-{/* <Route exact path='/' render={props => (
+{ /* <Route exact path='/' render={props => (
             <Posts
               posts={this.props.posts}
               fetchPosts={this.props.fetchPosts}
@@ -65,4 +64,4 @@ export default AppRoutes
               ))}
               {...props}
             />
-          )} /> */}
+          )} /> */ }
