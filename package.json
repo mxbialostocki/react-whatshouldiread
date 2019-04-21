@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
-    "dev": "node server & webpack --watch",
+    "dev": "nodemon server & webpack --watch",
     "server": "node server",
     "start": "webpack && node server",
     "test": "jest --watchAll"
@@ -31,6 +31,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "knex": "^0.16.5",
+    "mssql": "^5.1.0",
     "nodemon": "^1.18.11",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { retrieveRandomTitle } from '../api/api'
+import { retrieveAllTitles } from '../api'
 
 class Review extends React.Component {
   state = {
@@ -17,9 +17,9 @@ class Review extends React.Component {
   }
 
   componentDidMount() {
-    retrieveRandomTitle()
+    retrieveAllTitles()
     .then(bookData => {
-      const { jacket_image_path, title, author_first, author_last, publisher, publication_year, determination} = bookData
+      const { jacket_image_path, title, author_first, author_last, publisher, publication_year } = bookData
       this.setState({
         jacket_image_path,
         title,

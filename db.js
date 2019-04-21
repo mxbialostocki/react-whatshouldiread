@@ -2,16 +2,9 @@ const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
-import React from 'react'
-
-module.exports = {
-  retrieveAllTitles,
-  retrieveAllTitlesWithReviews,
-  retrieveRandomTitle
-}
 
 // function to render all existing books
-function retrieveAllTitles ( db = connection) {
+function retrieveAllTitles (db = connection) {
   return db('books')
   .select()
 }
@@ -34,3 +27,10 @@ function retrieveRandomTitle (db = connection) {
 // function to render multiple reviews by list (make continuous scroll auto-load five at a time)
 
 // function to render random individual title based on preferences
+
+
+module.exports = {
+  retrieveAllTitles,
+  retrieveAllTitlesWithReviews,
+  retrieveRandomTitle
+}

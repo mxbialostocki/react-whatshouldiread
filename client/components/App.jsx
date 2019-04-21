@@ -11,7 +11,7 @@ class App extends React.Component {
 
         <Route exact path='/' component={Resting} />
         <Route exact path='/main' component={Main} />
-        <Route path ='/main/alllist' component={Reviews} />
+        <Route exact path='/listReviews' component={Reviews} />
 
       </React.Fragment>
     )
