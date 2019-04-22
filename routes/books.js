@@ -5,10 +5,11 @@ const router  = express.Router()
 router.get('/', (req, res) => {
   db.retrieveAllTitles()
   .then(allTitles => {
-    const titles = JSON.parse(allTitles)
-    return titles
+    const titles = {
+      titles: allTitles
+    }
+    res.json(titles)
   })
-  res.JSON(titles)
 })
 
 router.get('/alllist', (req, res) => {

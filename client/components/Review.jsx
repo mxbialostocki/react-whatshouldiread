@@ -37,7 +37,7 @@ class Review extends React.Component {
         <img className="jacket" src={this.state.jacket_image_path} alt={this.state.title}>
         </img>
         <h2 className="title">{this.state.title}</h2>
-        <h3 className="author">{this.state.author_first}</h3>
+        <h3 className="author">{this.state.author_first} {this.state.author_last}</h3>
         <p className="publisher">{this.state.publisher}</p>
         <p className="publication-year">{this.state.publication_year}</p>
       </React.Fragment>

@@ -10,9 +10,8 @@ const server = express()
 server.use(express.static(path.join(__dirname, './public')))
 server.use(express.json())
 
-server.use('.v1/books', books)
-server.use('.v1/covers', covers)
-server.use('.v1/*', (req, res) => res.sendStatus(404))
+server.use('/v1/books', books)
+server.use('/v1/covers', covers)
 
 server.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../server/public/index.html'))

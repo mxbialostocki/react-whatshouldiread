@@ -1,6 +1,11 @@
 import React from 'react'
 
 class Covers extends React.Component {
+
+  // function that iterates over title list and returns image / link tags
+  // returns an array jacket image paths
+
+
   render () {
     return (
       <React.Fragment>

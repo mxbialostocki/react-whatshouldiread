@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 export function retrieveAllTitles () {
-  return request.get('/v1/alllist')
+  return request.get('/v1/books')
     .then(res => {
       const titles = res.body
       return titles

@@ -17,7 +17,7 @@ class AppRoutes extends React.Component {
           <Route exact path='/' component={Resting} />
           <Route exact path='/main' component={Main} />
           <Route exact path='/alllist' component={ReviewFrame} />
-          <Route exact path='./allcovers' component={Covers} />
+          <Route exact path='/allcovers' component={Covers} />
 
         </Switch>
       </div>
