@@ -11,4 +11,8 @@ router.get('/', (req, res) => {
   res.JSON(titles)
 })
 
+router.get('/alllist', (req, res) => {
+  res.send('got some good titles here')
+})
+
 module.exports = router

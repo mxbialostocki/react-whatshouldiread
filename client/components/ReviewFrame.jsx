@@ -1,23 +1,24 @@
 import React from 'react'
 import Review from './Review'
-import db from '../../db'
+// import db from '../../db'
 
 class ReviewFrame extends React.Component {
   // onComponentDidMount()
 
   render () {
     return (
-      <div>
+      <React.Fragment>
 
-        <h1 className="resting-title">what should I read ?</h1>
-        <Review />
+      <div>
+<Review />
+</div>
+        <div>
         <button>fuck no</button>
         <button>i want poetry</button>
         <button>i want short stories</button>
         <button>i want tangata whenua</button>
-
-      </div>
-
+        </div>
+      </React.Fragment>
     )
   }
 }

@@ -5,7 +5,8 @@ import { Route, Switch } from 'react-router-dom'
 import Reviews from './Reviews'
 import Resting from './Resting'
 import Main from './Main'
-// import Covers from './Covers'
+import ReviewFrame from './ReviewFrame'
+import Covers from './Covers'
 
 class AppRoutes extends React.Component {
   render () {
@@ -15,7 +16,8 @@ class AppRoutes extends React.Component {
 
           <Route exact path='/' component={Resting} />
           <Route exact path='/main' component={Main} />
-          <Route exact path='/listReviews' component={Reviews} />
+          <Route exact path='/alllist' component={ReviewFrame} />
+          <Route exact path='./allcovers' component={Covers} />
 
         </Switch>
       </div>
