@@ -3,7 +3,7 @@ import React from 'react'
 class Reviews extends React.Component {
   render () {
     return (
-      <h2>amazing!!</h2>
+      <h2>this renders the list of recommendations!!</h2>
     )
   }
 }
