@@ -20,7 +20,8 @@ class Review extends React.Component {
     retrieveRandomTitle()
       .then(bookData => {
         console.log('review.jsx:', bookData)
-        const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, reviewer_head, reviewer_body } = bookData[0]
+        const randomTitle = Math.floor(Math.random() * bookData.length)
+        const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body } = bookData[randomTitle]
         this.setState({
           jacket_image_path,
           title,
@@ -29,8 +30,8 @@ class Review extends React.Component {
           publisher,
           publication_year,
           reviewer_name,
-          reviewer_head,
-          reviewer_body
+          review_head,
+          review_body
         })
       })
   }
@@ -38,12 +39,24 @@ class Review extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <img className="jacket" src={this.state.jacket_image_path} alt={this.state.title}>
-        </img>
-        <h2 className="title">{this.state.title}</h2>
-        <h3 className="author">{this.state.author_first} {this.state.author_last}</h3>
-        <p className="publisher">{this.state.publisher}</p>
-        <p className="publication-year">{this.state.publication_year}</p>
+        <div className="book-data">
+          <img className="jacket" src={this.state.jacket_image_path} alt={`${this.state.title} by ${this.state.author_first} ${this.state.author_last}`} />
+          <div className="book-display">
+
+            <h2 className="title">{this.state.title}</h2>
+            <h3 className="author">{this.state.author_first} {this.state.author_last}</h3>
+            <p className="publishing-info">{this.state.publisher} {this.state.publication_year}</p>
+
+          </div>
+          
+          <div className="review-display">
+            <p className="review-head">{this.state.review_head}</p>
+            <p className="reviewer">{this.state.reviewer_name}</p>
+            <p className="review-body">{this.state.review_body}</p>
+          </div>
+
+        </div>
+
       </React.Fragment>
     )
   }

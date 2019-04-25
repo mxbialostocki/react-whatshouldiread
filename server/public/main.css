@@ -1,18 +1,24 @@
 * {
-  border: 0.3px solid red;
+  border: 0.1px solid red;
 }
 
 /* typography */
-font-family: 'Francois One', sans-serif;
-font-family: 'Playball', cursive;
-font-family: 'Cormorant Garamond', serif;
-
-Header {
-  text-decoration: 
+h1, h3 {
+  font-family: 'Inconsolata', monospace;
 }
+h2 {
+  font-family: 'Elsie', cursive;
+}
+
+
 body {
   font-family: 'Francois One', sans-serif;
-  font-size: 25px;
+  text-decoration: none;
+}
+
+/* navigation */
+Header {
+  text-decoration: none;
 }
 #nav-main {
   display: flex;
@@ -20,3 +26,28 @@ body {
 .nav-child {
   flex-direction: row;
 }
+
+/* review body */
+.review-frame-shape {
+  display: flex;
+  margin: 0px auto;
+  font-size: 40px;
+  justify-content: center;
+  text-decoration: none;
+
+}
+
+ .book-data {
+   width: 1080px;
+   display: flex;
+   margin: 0px auto;
+ }
+
+ .jacket {
+    width: 250px;
+    height: 350px;
+ }
+
+ .review-display {
+   font-family: 'mono'
+ }
