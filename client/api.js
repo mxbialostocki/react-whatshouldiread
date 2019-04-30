@@ -13,7 +13,7 @@ export function retrieveRandomTitle () {
 }
 
 export function retrieveAllTitles () {
-  return request.get('/v1/books/reviews')
+  return request.get('/v1/books/alllist')
     .then(resp => {
       const titles = resp.body
       return titles

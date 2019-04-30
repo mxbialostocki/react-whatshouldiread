@@ -8,16 +8,18 @@ class ReviewFrame extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <div className="review-frame-container">
+          <div>
+            <Review />
+          </div>
+          <div className="review-frame-buttons-container">
+            <button className="review-frame-buttons">fuck no</button>
+            <button className="review-frame-buttons">i want poetry</button>
+            <button className="review-frame-buttons">i want short stories</button>
+            <button className="review-frame-buttons">tangata whenua only</button>
+          </div>
+        </div>
 
-        <div>
-          <Review />
-        </div>
-        <div>
-          <button>fuck no</button>
-          <button>i want poetry</button>
-          <button>i want short stories</button>
-          <button>tangata whenua only</button>
-        </div>
       </React.Fragment>
     )
   }
