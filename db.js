@@ -2,24 +2,19 @@ const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
-// function to render random individual title
-function retrieveRandomTitle (db = connection) {
+// function to render all existing books
+function retrieveAllTitles (db = connection) {
   return db('books')
     .leftJoin('reviews', 'books.isbn', 'reviews.review_isbn')
     .select('books.isbn', 'books.title', 'books.author_first', 'books.author_last', 'books.jacket_image_path', 'books.publisher', 'books.publication_year', 'books.determination', 'reviews.reviewer_name', 'reviews.review_head', 'reviews.review_body')
 }
 
-// function to render all existing books
-function retrieveAllTitles (db = connection) {
+// function to render random individual title
+function retrieveTitleById (id, db = connection) {
   return db('books')
-    .select()
-}
-
-// function to render all existing books with reviews
-function retrieveAllTitlesWithReviews (db = connection) {
-  return db('books')
-    .join('reviews', 'books.isbn', 'reviews.review_isbn')
-    .select('books.isbn', 'books.title', 'books.author_first', 'books.author_last', 'books.jacket_image_path', 'books.publisher', 'books.publication year', 'books.determination')
+    .leftJoin('reviews', 'books.isbn', 'reviews.review_isbn')
+    .where(id, 'books.id')
+    .select('books.isbn', 'books.title', 'books.author_first', 'books.author_last', 'books.jacket_image_path', 'books.publisher', 'books.publication_year', 'books.determination', 'reviews.reviewer_name', 'reviews.review_head', 'reviews.review_body')
 }
 
 // function to render multiple jacket images and no other information
@@ -30,6 +25,5 @@ function retrieveAllTitlesWithReviews (db = connection) {
 
 module.exports = {
   retrieveAllTitles,
-  retrieveAllTitlesWithReviews,
-  retrieveRandomTitle
+  retrieveTitleById
 }

@@ -16,16 +16,11 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.findTitles()
-  }
-
-  findTitles () {
-    return retrieveAllTitles()
-      .then(titles => {
-        this.setState({ titles: titles })
-      })
-      .catch(err => {
-        this.setState({ errorMessage: err.message })
+    retrieveAllTitles()
+      .then(bookData => {
+        console.log('review.jsx:', bookData)
+        const randomTitle = Math.floor(Math.random() * bookData.length)
+        const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body } = bookData[randomTitle]
       })
   }
 

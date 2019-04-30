@@ -1,44 +1,15 @@
 import React from 'react'
-import { retrieveRandomTitle } from '../api'
+import { retrieveAllTitles } from '../api'
 
-class Review extends React.Component {
-  state = {
-    isbn: '',
-    jacket_image_path: '',
-    title: '',
-    author_first: '',
-    author_last: '',
-    publisher: '',
-    publication_year: '',
-    determination: '',
-    reviewer_name: '',
-    review_head: '',
-    review_body: ''
-  }
-
-  componentDidMount () {
-    retrieveRandomTitle()
-      .then(bookData => {
-        console.log('review.jsx:', bookData)
-        const randomTitle = Math.floor(Math.random() * bookData.length)
-        const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body } = bookData[randomTitle]
-        this.setState({
-          jacket_image_path,
-          title,
-          author_first,
-          author_last,
-          publisher,
-          publication_year,
-          reviewer_name,
-          review_head,
-          review_body
-        })
-      })
-  }
+const Review = (props) => {
+  
+  
 
   render () {
+    {const {jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body} = props.book}
     return (
       <React.Fragment>
+        
         <div className="book-data">
           <img className="jacket" src={this.state.jacket_image_path} alt={`${this.state.title} by ${this.state.author_first} ${this.state.author_last}`} />
           <div className="book-display">
