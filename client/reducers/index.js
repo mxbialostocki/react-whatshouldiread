@@ -1,9 +1,9 @@
-// import { combineReducers } from 'redux'
+import { combineReducers } from 'redux'
 
-// import errorMessage from './error-message'
+import errorMessage from './errorMessage'
+import retrieveAllTitles from './retrieveAllTitles'
 
-// export default combineReducers({
-//   errorMessage,
-//   subreddits,
-//   waiting
-// })
+export default combineReducers({
+  errorMessage,
+  retrieveAllTitles
+})

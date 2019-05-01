@@ -1,15 +1,20 @@
 import React from 'react'
+
+import { connect } from 'react-redux'
+
 import Review from './Review'
 
 function ReviewFrame (props) {
-  const randomTitle = Math.floor(Math.random() * props.length)
-  console.log('review frame bookdata:', props, props.bookdata)
+  console.log('review frame bookdata:', props.bookdata)
+
+  const { bookdata } = props
+  const randomTitle = Math.floor(Math.random() * bookdata.length)
 
   return (
     <React.Fragment>
       <div className="review-frame-container">
         <div>
-          <Review bookdata={props.bookdata[randomTitle]}/>
+          <Review bookdata={bookdata[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
           <button className="review-frame-buttons">fuck no</button>
@@ -23,4 +28,10 @@ function ReviewFrame (props) {
   )
 }
 
-export default ReviewFrame
+function mapStateToProps (state) {
+  return {
+    bookdata: state.retrieveAllTitles
+  }
+}
+
+export default connect(mapStateToProps)(ReviewFrame)

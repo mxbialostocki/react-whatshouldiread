@@ -1,6 +1,5 @@
 const path = require('path')
 const express = require('express')
-const request = require('superagent')
 
 const books = require('../routes/books')
 const covers = require('../routes/covers')

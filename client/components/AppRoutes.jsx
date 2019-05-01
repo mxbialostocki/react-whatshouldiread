@@ -1,49 +1,41 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import xyz from actions
-
 import { Route, Switch } from 'react-router-dom'
+
+// import xyz from actions
 
 import Reviews from './Reviews'
 import Main from './Main'
 import ReviewFrame from './ReviewFrame'
 import Covers from './Covers'
 
-import { retrieveAllTitles } from '../api'
+import { retrieveAllTitles } from '../actions'
 
-class AppRoutes extends React.Component {
-  state = {
-    bookdata: ''
-  }
+function AppRoutes (props) {
+  const { dispatch, bookdata } = props
 
-  componentDidMount () {
-    retrieveAllTitles()
-      .then(bookData => {
-        console.log('AppRoutes: ', bookData)
-        this.setState({
-          bookdata: bookData
-        })
-      })
-  }
+  dispatch(retrieveAllTitles())
 
-  render () {
-    const { dispatch, children } = this.props
-    console.log('AppRoutes / render ', this.state.bookdata)
-    return (
+  return (
 
-      <div>
-        <Switch>
+    <div>
+      <Switch>
 
-          <Route exact path='/' component={Main} />
-          <Route exact path='/books/review' component={ReviewFrame} bookdata={this.state.bookdata}/>
-          <Route exact path='/books/alllist' component={Reviews} bookdata={this.state.bookdata}/>
-          <Route exact path='/books/allcovers' component={Covers} bookdata={this.state.bookdata}/>
+        <Route exact path='/' component={Main} />
+        <Route exact path='/books/review' component={ReviewFrame} bookdata={bookdata}/>
+        <Route exact path='/books/alllist' component={Reviews} bookdata={bookdata}/>
+        <Route exact path='/books/allcovers' component={Covers} bookdata={bookdata}/>
 
-        </Switch>
-      </div>
+      </Switch>
+    </div>
 
-    )
+  )
+}
+
+function mapStateToProps (state) {
+  return {
+    bookdata: state.retrieveAllTitles
   }
 }
 
-export default connect()(AppRoutes)
+export default connect(mapStateToProps)(AppRoutes)
