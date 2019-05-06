@@ -9,27 +9,29 @@ import Main from './Main'
 import ReviewFrame from './ReviewFrame'
 import Covers from './Covers'
 
-import { retrieveAllTitles } from '../actions'
+// import { retrieveAllTitles } from '../actions'
 
-function AppRoutes (props) {
-  const { dispatch, bookdata } = props
+class AppRoutes extends React.Component {
+  // componentDidMount () {
+  //   this.props.dispatch(retrieveAllTitles())
+  // }
 
-  dispatch(retrieveAllTitles())
+  render () {
+    return (
 
-  return (
+      <div>
+        <Switch>
 
-    <div>
-      <Switch>
+          <Route exact path='/' component={Main} />
+          <Route exact path='/books/review' component={ReviewFrame}/>
+          <Route exact path='/books/alllist' component={Reviews}/>
+          <Route exact path='/books/allcovers' component={Covers}/>
 
-        <Route exact path='/' component={Main} />
-        <Route exact path='/books/review' component={ReviewFrame} bookdata={bookdata}/>
-        <Route exact path='/books/alllist' component={Reviews} bookdata={bookdata}/>
-        <Route exact path='/books/allcovers' component={Covers} bookdata={bookdata}/>
+        </Switch>
+      </div>
 
-      </Switch>
-    </div>
-
-  )
+    )
+  }
 }
 
 function mapStateToProps (state) {

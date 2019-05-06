@@ -1,8 +1,7 @@
 import React from 'react'
 
 function Review (props) {
-  const randomTitle = props
-  const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body } = randomTitle
+  const { jacket_image_path, title, author_first, author_last, publisher, publication_year, reviewer_name, review_head, review_body } = props.bookdata
   return (
     <React.Fragment>
 

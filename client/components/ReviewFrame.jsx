@@ -5,16 +5,15 @@ import { connect } from 'react-redux'
 import Review from './Review'
 
 function ReviewFrame (props) {
-  console.log('review frame bookdata:', props.bookdata)
-
-  const { bookdata } = props
-  const randomTitle = Math.floor(Math.random() * bookdata.length)
+  const { titles } = props
+  const randomTitle = Math.floor(Math.random() * titles.length)
+  console.log('review frame bookdata:', titles)
 
   return (
     <React.Fragment>
       <div className="review-frame-container">
         <div>
-          <Review bookdata={bookdata[randomTitle]}/>
+          <Review bookdata={titles[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
           <button className="review-frame-buttons">fuck no</button>
@@ -30,7 +29,7 @@ function ReviewFrame (props) {
 
 function mapStateToProps (state) {
   return {
-    bookdata: state.retrieveAllTitles
+    titles: state.retrieveAllTitles
   }
 }
 

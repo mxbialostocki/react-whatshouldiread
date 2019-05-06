@@ -14,7 +14,7 @@ export const requestTitles = () => {
 export const recieveTitles = (titles) => {
   return {
     type: RECIEVE_TITLES,
-    titles: titles.map(title => title.data)
+    titles: titles.map(title => title)
   }
 }
 
@@ -28,7 +28,7 @@ export const showError = (errorMessage) => {
 export function retrieveAllTitles () {
   return (dispatch) => {
     request
-      .get('/api/v1/books')
+      .get('/v1/books')
       .then(response => {
         dispatch(recieveTitles(response.body))
       })

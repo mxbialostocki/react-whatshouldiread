@@ -1,8 +1,10 @@
 import React from 'react'
 
+import { connect } from 'react-redux'
+
 import Review from './Review'
 
-export default function Reviews (props) {
+function Reviews (props) {
   const bookData = props.bookdata.map(book => {
     return <Review key={book.isbn} book={book}/>
   })
@@ -15,3 +17,5 @@ export default function Reviews (props) {
     </React.Fragment>
   )
 }
+
+export default connect()(Reviews)
