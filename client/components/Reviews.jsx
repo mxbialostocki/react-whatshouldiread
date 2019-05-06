@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import Review from './Review'
 
 function Reviews (props) {
-  const bookData = props.bookdata.map(book => {
-    return <Review key={book.isbn} book={book}/>
+  const bookData = this.props.bookdata.map(book => {
+    return <Review key={book.isbn} bookdata={book}/>
   })
   console.log('Reviews.jsx:', props.bookdata)
 
@@ -18,4 +18,10 @@ function Reviews (props) {
   )
 }
 
-export default connect()(Reviews)
+function mapStateToProps (state) {
+  return {
+    titles: state.retrieveAllTitles
+  }
+}
+
+export default connect(mapStateToProps)(Reviews)
