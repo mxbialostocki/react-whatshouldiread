@@ -1,6 +1,5 @@
 const path = require('path')
 const express = require('express')
-const request = require('superagent')
 
 const books = require('../routes/books')
 const covers = require('../routes/covers')
@@ -14,7 +13,7 @@ server.use('/v1/books', books)
 server.use('/v1/covers', covers)
 
 server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../server/public/index.html'))
+  res.redirect('/')
 })
 
 module.exports = server

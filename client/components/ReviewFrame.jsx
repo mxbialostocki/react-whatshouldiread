@@ -1,28 +1,36 @@
 import React from 'react'
+
+import { connect } from 'react-redux'
+
 import Review from './Review'
-// import db from '../../db'
 
-class ReviewFrame extends React.Component {
-  // onComponentDidMount()
+function ReviewFrame (props) {
+  const { titles } = props
+  const randomTitle = Math.floor(Math.random() * titles.length)
+  console.log('review frame bookdata:', titles)
 
-  render () {
-    return (
-      <React.Fragment>
-        <div className="review-frame-container">
-          <div>
-            <Review />
-          </div>
-          <div className="review-frame-buttons-container">
-            <button className="review-frame-buttons">fuck no</button>
-            <button className="review-frame-buttons">i want poetry</button>
-            <button className="review-frame-buttons">i want short stories</button>
-            <button className="review-frame-buttons">tangata whenua only</button>
-          </div>
+  return (
+    <React.Fragment>
+      <div className="review-frame-container">
+        <div>
+          <Review bookdata={titles[randomTitle]}/>
         </div>
+        <div className="review-frame-buttons-container">
+          <button className="review-frame-buttons">fuck no</button>
+          <button className="review-frame-buttons">i want poetry</button>
+          <button className="review-frame-buttons">i want short stories</button>
+          <button className="review-frame-buttons">tangata whenua only</button>
+        </div>
+      </div>
 
-      </React.Fragment>
-    )
+    </React.Fragment>
+  )
+}
+
+function mapStateToProps (state) {
+  return {
+    titles: state.retrieveAllTitles
   }
 }
 
-export default ReviewFrame
+export default connect(mapStateToProps)(ReviewFrame)

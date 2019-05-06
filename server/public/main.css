@@ -1,5 +1,4 @@
 * {
-  border: 0.1px solid red;
   padding: 5px;
   text-decoration: none;
 }
@@ -59,7 +58,6 @@ Header {
  }
 
 .jacket {
-    width: 250px;
     height: 350px;
  }
 
