@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import Review from './Review'
 
 function Reviews (props) {
-  const bookData = this.props.bookdata.map(book => {
+  const bookData = props.titles.map(book => {
     return <Review key={book.isbn} bookdata={book}/>
   })
   console.log('Reviews.jsx:', props.bookdata)
