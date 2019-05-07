@@ -8,12 +8,13 @@ function Reviews (props) {
   const bookData = props.titles.map(book => {
     return <Review key={book.isbn} bookdata={book}/>
   })
-  console.log('Reviews.jsx:', props.bookdata)
 
   return (
     <React.Fragment>
       <h2>this renders the list of recommendations!!</h2>
-      {bookData}
+      <div className="reviews-list-container">
+        {bookData}
+      </div>
     </React.Fragment>
   )
 }
