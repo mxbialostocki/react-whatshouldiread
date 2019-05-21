@@ -17,9 +17,9 @@ ergo;
   // a future option includes a related table of New Zealand titles "Just show me Tangata Whenua thanks".
 
 Subsequent features: 
-1. View a cloud of all reviews by cover, based on kindOfBook, with no other information until clicked.
-2. View a list of all reviews based on kindOfBook.
-3. Return to a single-vew basis.
+1. View a cloud of all reviews by cover, based on determination, with no other information until clicked.
+2. View a list of all reviews based on determination.
+3. Return to a single-view basis.
 4. Small Header descends on hover including [ just one book /// all / covers /// all / list /// who? ]
 5. Some reviews will have hard-coded relevant additional features
 6. Email yourself a recommendation for later
@@ -30,4 +30,13 @@ Subsequent features:
 9. Even if the review text is written in English, offer option to switch the basic functionality of the site to te reo.
 
 ## how does it work?
-React // Babel // react-router-dom
+React // Redux // react-router-dom
+
+## to view the experimentation:
+1. clone the repository to your local machine
+2. in the terminal, navigate to the relative directory, run npm install
+3. run:
+    npx knex migrate:latest
+    npx knex seed:run
+4. spin up npm run dev
+5. Look at localhost:3000 in your preferred browser
