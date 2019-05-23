@@ -10,7 +10,6 @@ import ReviewFrame from './ReviewFrame'
 import Covers from './Covers'
 
 class AppRoutes extends React.Component {
-
   render () {
     return (
 

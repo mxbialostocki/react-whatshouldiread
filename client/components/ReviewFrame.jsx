@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Review from './Review'
@@ -15,7 +15,7 @@ function ReviewFrame (props) {
           <Review bookdata={titles[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
-          <button className="review-frame-buttons">not this one</button>
+          <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
           {/* <button className="review-frame-buttons">i want poetry</button>
           <button className="review-frame-buttons">i want short stories</button>
           <button className="review-frame-buttons">tangata whenua only</button> */}
