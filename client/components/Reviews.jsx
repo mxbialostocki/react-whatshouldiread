@@ -11,7 +11,6 @@ function Reviews (props) {
 
   return (
     <React.Fragment>
-      <h2>this renders the list of recommendations!!</h2>
       <div className="reviews-list-container">
         {bookData}
       </div>

@@ -1,5 +1,4 @@
 * {
-  border: .2px solid red;
   padding: 5px;
   text-decoration: none;
 }
@@ -84,8 +83,7 @@ Header {
 .grow {
   transition: 200ms ease;
 }
-  
-.grow:hover{
+.grow:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
