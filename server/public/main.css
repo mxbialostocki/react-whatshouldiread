@@ -56,18 +56,26 @@ Header {
 .book-data {
   display: flex;
  }
+.review-data {
+  display: flex;
+  flex-direction: column;
+}
 .jacket {
   height: 350px;
- }
+}
 .review-display {
   font-family: 'mono'
- }
+}
+.title {
+  font-size: 36pt;
+  padding: 0 5px;
+}
 .reviews-list-container {
   width: 1080px;
   display: flex;
   flex-direction: column;
   margin: 0px auto;
-  }
+}
 
 /* Cover List Display */
 
