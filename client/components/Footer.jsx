@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Footer extends React.Component {
-  footerstyle= {
+  footerstyle = {
     color: 'white'
   }
   render () {
     return (
       <footer>
-        <small style={this.footerstyle}>ghosts in the m a c h i n e</small>
+        <small style={this.footerstyle}><Link to='/'>what should I read?</Link></small>
       </footer>
     )
   }
