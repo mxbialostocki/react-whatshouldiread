@@ -11,14 +11,14 @@ function Review (props) {
           <div className="book-display">
 
             <h2 className="title">{title}</h2>
-            <h3 className="author">{author_first} {author_last}</h3>
+            <h3 className="author">by {author_first} {author_last}</h3>
             <p className="publishing-info">{publisher} {publication_year}</p>
 
           </div>
 
           <div className="review-display">
             <p className="review-head">{review_head}</p>
-            <p className="reviewer">{reviewer_name}</p>
+            <p className="reviewer">Recommended by {reviewer_name}</p>
             <p className="review-body">{review_body}</p>
           </div>
         </div>

@@ -32,6 +32,7 @@ Header {
   margin: 0px auto;
 }
 .nav-child {
+  font-size: 14pt;
 }
 
 /* review body */
@@ -53,6 +54,10 @@ Header {
   flex-direction: row;
   justify-content: space-around;
 }
+.review-frame-buttons {
+  padding: 30px;
+  border: .5px solid black;
+}
 .book-data {
   display: flex;
  }
@@ -69,12 +74,25 @@ Header {
 .title {
   font-size: 36pt;
   padding: 0 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.author {
+  font-size: 18pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .reviews-list-container {
   width: 1080px;
   display: flex;
   flex-direction: column;
   margin: 0px auto;
+}
+.review-head,
+.reviewer,
+.review.body {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /* Cover List Display */
