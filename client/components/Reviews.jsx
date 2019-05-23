@@ -5,17 +5,23 @@ import { connect } from 'react-redux'
 import Review from './Review'
 
 function Reviews (props) {
-  const bookData = props.bookdata.map(book => {
-    return <Review key={book.isbn} book={book}/>
+  const bookData = props.titles.map(book => {
+    return <Review key={book.isbn} bookdata={book}/>
   })
-  console.log('Reviews.jsx:', props.bookdata)
 
   return (
     <React.Fragment>
-      <h2>this renders the list of recommendations!!</h2>
-      {bookData}
+      <div className="reviews-list-container">
+        {bookData}
+      </div>
     </React.Fragment>
   )
 }
 
-export default connect()(Reviews)
+function mapStateToProps (state) {
+  return {
+    titles: state.retrieveAllTitles
+  }
+}
+
+export default connect(mapStateToProps)(Reviews)

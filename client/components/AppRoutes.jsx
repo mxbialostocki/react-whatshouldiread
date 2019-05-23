@@ -9,12 +9,7 @@ import Main from './Main'
 import ReviewFrame from './ReviewFrame'
 import Covers from './Covers'
 
-// import { retrieveAllTitles } from '../actions'
-
 class AppRoutes extends React.Component {
-  // componentDidMount () {
-  //   this.props.dispatch(retrieveAllTitles())
-  // }
 
   render () {
     return (

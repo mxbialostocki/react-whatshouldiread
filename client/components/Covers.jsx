@@ -1,20 +1,26 @@
 import React from 'react'
 
-class Covers extends React.Component {
+import { connect } from 'react-redux'
 
-  // function that iterates over title list and returns image / link tags
-  // returns an array jacket image paths
+import CoverRender from './CoverRender'
 
+function Covers (props) {
+  const coverList = props.titles.map(book => {
+    return <CoverRender key={book.isbn} isbn={book.isbn} cover={book.jacket_image_path} />
+  })
 
-  render () {
-    return (
-      <React.Fragment>
-        <div id="covers">
-        <img src="https://i.harperapps.com/covers/9780062110916/x500.jpg"/>
-        </div>
-      </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <div className="cover-list-container">
+        {coverList}
+      </div>
+    </React.Fragment>
+  )
+}
+function mapStateToProps (state) {
+  return {
+    titles: state.retrieveAllTitles
   }
 }
 
-export default Covers
+export default connect(mapStateToProps)(Covers)
