@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 
-// import xyz from actions
-
 import Reviews from './Reviews'
 import Main from './Main'
 import ReviewFrame from './ReviewFrame'
