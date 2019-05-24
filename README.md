@@ -28,6 +28,7 @@ ergo;
 9. a future option includes a related table of New Zealand titles "Just show me Tangata Whenua thanks".
 
 ## Dev to-do list
+[] When title is selected from "covers-all" link to an individual instance of the review
 [] If a book is rejected, it is removed from the redux store list of feasible random titles
 [] User can select what kind of books they want to be shown based on "determination" column using buttons in the ReviewFrame.
 [] // If activeFilter = "novels" then a function will pull only the novels from the redux store
