@@ -7,29 +7,36 @@ ergo;
 
 ## MVP
 1. Landing page asks 'what should I read'
-2. Interaction displays randomly chosen book with default views
-3. Beneath book are three options:
-  1. "not this one" - removes the book from list of possible returns and returns new book
-  2. "I wanted x" changes returnable books to select from the type not currently displayed
-  3. "I wanted y" same again
-  So if the randomly selected title is a novel, the two buttons displayed will be "I wanted Poetry" and "I wanted Short Stories"
-  // a future option includes a related table of New Zealand titles "Just show me Tangata Whenua thanks".
+2. Interaction displays randomly chosen book with default views.
+3. Beneath book is a button:
+  - "not this one" - removes the book from list of possible returns and returns new book.
+4. Option to view a cloud of covers based on determination.
+5. Minimal header allows navigation between the three views.
+  
 
-## Subsequent features: 
+## Future features: 
 1. View a cloud of all reviews by cover, based on determination, with no other information until clicked.
 2. View a list of all reviews based on determination.
-3. Return to a single-view basis.
-4. Small Header descends on hover including [ just one book /// all / covers /// all / list /// who? ]
-5. Some reviews will have hard-coded relevant additional features
-6. Email yourself a recommendation for later
-7. Find an independent bookshop near you based on the location you are browsing from.
+3. Some reviews will have hard-coded relevant additional features
+4. Email yourself a recommendation for later
+5. Find an independent bookshop near you based on the location you are browsing from.
    - consider a seperate page listing recommended shops around the world.
    - this would utilise an external api data to reference user view based on geographic location
-8. Configure how much information to display about a book in the single review field.
-9. Even if the review text is written in English, offer option to switch the basic functionality of the site to te reo.
+6. Configure how much information to display about a book in the single review field.
+7. Even if the review text is written in English, offer option to switch the basic functionality of the site to te reo.
+8. So if the randomly selected title is a novel, the two buttons displayed will be "I wanted Poetry" and "I wanted Short Stories"
+9. a future option includes a related table of New Zealand titles "Just show me Tangata Whenua thanks".
+
+## Dev to-do list
+[] If a book is rejected, it is removed from the redux store list of feasible random titles
+[] User can select what kind of books they want to be shown based on "determination" column using buttons in the ReviewFrame.
+[] // If activeFilter = "novels" then a function will pull only the novels from the redux store
+[] Impliment a UI library to make the basic css redundant
+[] Replace all seed data with original recommendations
+[] Shift the url jacket links to a local store of regulated images
 
 ## how does it work?
-React // Redux // react-router-dom // Knex //
+React // Redux // Express // Knex
 
 ## to view the experimentation:
 1. clone the repository to your local machine
