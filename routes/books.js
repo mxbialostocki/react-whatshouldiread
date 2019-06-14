@@ -7,4 +7,6 @@ router.get('/', (req, res) => {
     .then(bookData => res.send(bookData))
 })
 
+// deleted single view route because this should all be happening in the redux stores
+
 module.exports = router
