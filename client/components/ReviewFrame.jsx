@@ -8,6 +8,12 @@ function ReviewFrame (props) {
   const { titles } = props
   const randomTitle = Math.floor(Math.random() * titles.length)
 
+  // I need a ternary operator to determine whether to display a random title based on whether the state is set to "RANDOM" or to "SPECIFIC"
+
+  // I need state changes based on whether the random state offers determinations - ie if the user selects "I want short stories" then only records with the determination "short stories" will be listed in bookdata
+
+  // I need buttons with an onClick action that sets the state to the determination
+
   return (
     <React.Fragment>
       <div className="review-frame-container">

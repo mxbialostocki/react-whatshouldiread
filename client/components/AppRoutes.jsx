@@ -16,6 +16,7 @@ class AppRoutes extends React.Component {
 
           <Route exact path='/' component={Main} />
           <Route exact path='/books/review' component={ReviewFrame}/>
+          <Route exact path='/books/review/:isbn' component={ReviewFrame}/>
           <Route exact path='/books/alllist' component={Reviews}/>
           <Route exact path='/books/allcovers' component={Covers}/>
 
