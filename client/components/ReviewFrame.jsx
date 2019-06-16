@@ -5,8 +5,17 @@ import { connect } from 'react-redux'
 import Review from './Review'
 
 function ReviewFrame (props) {
+  // State One - Random / All
   const { titles } = props
   const randomTitle = Math.floor(Math.random() * titles.length)
+
+  // State Two - Random / Novels
+
+  // State Three - Random / Short Stories
+
+  // State Four - Random / Poetry
+
+  // State Five - Random / Aotearoa
 
   // I need a ternary operator to determine whether to display a random title based on whether the state is set to "RANDOM" or to "SPECIFIC"
 
