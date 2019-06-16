@@ -24,7 +24,8 @@ exports.seed = function (knex, Promise) {
         { isbn: 9781776560547, title: `A Beautiful Hesitation`, author_first: `Fiona`, author_last: `Pardington`, jacket_image_path: `https://cdn11.bigcommerce.com/s-58zklai/images/stencil/2048x2048/products/1030/1475/A_Beautiful_Hesitation_cover__76310.1449109982.jpg?c=2`, publisher: `Victoria University Press`, publication_year: 2016, determination: `nonfiction aotearoa` },
         { isbn: 9781606997437, title: `Megahex`, author_first: `Simon`, author_last: `Hanselmann`, jacket_image_path: `http://www.fantagraphics.com/images/thumbnails/400/553/product/6/megahex-fc.png`, publisher: `Fantagraphics Books`, publication_year: 2014, determination: `novel stories` },
         { isbn: 9781590171028, title: `The Island of Horses`, author_first: `Eilis`, author_last: `Dillon`, jacket_image_path: `https://cdn.shopify.com/s/files/1/0726/9203/products/The-Island-of-Horses_2048x2048.jpg?v=1518198775`, publisher: `The New York Review Children’s Collection`, publication_year: 2004, determination: `novel` },
-        { isbn: 9781524761103, title: `Orchid & the Wasp`, author_first: `Caoilinn`, author_last: `Hughes`, jacket_image_path: `https://images.booksense.com/images/103/761/9781524761103.jpg`, publisher: `Hogarth`, publication_year: 2018, determination: `novel` }
+        { isbn: 9781524761103, title: `Orchid & the Wasp`, author_first: `Caoilinn`, author_last: `Hughes`, jacket_image_path: `https://images.booksense.com/images/103/761/9781524761103.jpg`, publisher: `Hogarth`, publication_year: 2018, determination: `novel` },
+        { isbn: 9780141987880, title: `My Poems Won't Change the World`, author_first: `Patrizia`, author_last: `Cavalli`, jacket_image_path: `https://www.penguin.co.uk/content/dam/prh/books/308/308623/9780141987880.jpg.transform/PRHDesktopWide_small/image.jpg`, publisher: `Penguin Modern Classics`, publication_year: 2018, determination: `poetry` }
 
       ])
     })
