@@ -6,21 +6,21 @@ import Review from './Review'
 
 function ReviewFrame (props) {
   // State One - Random / Everything
-  const { titles, dispatch } = props
+  const { titles } = props
   let activeTitles = titles
-  let novels = []
+  // let novels = []
   // buttons = novels / stories / poetry / aotearoa
 
   // State Two - Random / Novels
   // buttons = everything / stories / poetry / aotearoa
-  function filterNovels () {
-    titles.map(title => {
-      if (title.determination.includes('novels')) {
-        novels.push(title)
-      }
-    })
-    activeTitles = novels
-  }
+  // function filterNovels () {
+  //   titles.map(title => {
+  //     if (title.determination.includes('novels')) {
+  //       novels.push(title)
+  //     }
+  //   })
+  //   activeTitles = novels
+  // }
   // State Three - Random / Short Stories
   // buttons = everything / novels / poetry / aotearoa
 
@@ -46,8 +46,8 @@ function ReviewFrame (props) {
         </div>
         <div className="review-frame-buttons-container">
           <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
-          <button className="review-frame-buttons" id="novels" onClick={dispatch(filterNovels())}>i want novels</button>
-          {/* <button className="review-frame-buttons">i want short stories</button>
+          {/* <button className="review-frame-buttons" id="novels" onClick={dispatch(filterNovels())}>i want novels</button>
+          <button className="review-frame-buttons">i want short stories</button>
           <button className="review-frame-buttons">tangata whenua only</button> */}
         </div>
       </div>
