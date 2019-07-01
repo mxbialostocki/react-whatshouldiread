@@ -4,23 +4,26 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
+import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA } from '../actions/index'
+
 function ReviewFrame (props) {
   // State One - Random / Everything
-  const { titles } = props
+  const { titles, activePage } = props
   let activeTitles = titles
   // let novels = []
   // buttons = novels / stories / poetry / aotearoa
 
   // State Two - Random / Novels
   // buttons = everything / stories / poetry / aotearoa
-  // function filterNovels () {
-  //   titles.map(title => {
-  //     if (title.determination.includes('novels')) {
-  //       novels.push(title)
-  //     }
-  //   })
-  //   activeTitles = novels
-  // }
+  function filterTitles(determination) {
+    activeTitles = []
+    titles.map(title => {
+      if (title.determination.includes(determination)) {
+        activeTitles.push(title)
+      }
+    })
+    
+  }
   // State Three - Random / Short Stories
   // buttons = everything / novels / poetry / aotearoa
 
@@ -42,7 +45,7 @@ function ReviewFrame (props) {
     <React.Fragment>
       <div className="review-frame-container">
         <div>
-          <Review bookdata={titles[randomTitle]}/>
+          <Review bookdata={activeTitles[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
           <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
@@ -58,7 +61,8 @@ function ReviewFrame (props) {
 
 function mapStateToProps (state) {
   return {
-    titles: state.retrieveAllTitles
+    titles: state.retrieveAllTitles,
+    activePage: state.activePage
   }
 }
 

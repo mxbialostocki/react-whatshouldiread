@@ -54,7 +54,7 @@ export function activePageNovels () {
 export function activePageShortStories () {
   return {
     type: ACTIVE_PAGE_SHORT_STORIES,
-    activePage: 'short stories'
+    activePage: 'short-stories'
   }
 }
 
