@@ -8,7 +8,7 @@ import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTI
 
 function ReviewFrame (props) {
   // State One - Random / Everything
-  const { titles, activePage } = props
+  const { titles, activePage, dispatch } = props
   let activeTitles = titles
   // let novels = []
   // buttons = novels / stories / poetry / aotearoa
@@ -22,7 +22,6 @@ function ReviewFrame (props) {
         activeTitles.push(title)
       }
     })
-    
   }
   // State Three - Random / Short Stories
   // buttons = everything / novels / poetry / aotearoa
@@ -49,7 +48,7 @@ function ReviewFrame (props) {
         </div>
         <div className="review-frame-buttons-container">
           <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
-          {/* <button className="review-frame-buttons" id="novels" onClick={dispatch(filterNovels())}>i want novels</button>
+          {/* <button className="review-frame-buttons" id="novels" onClick={dispatch(filterTitles('novels'))}>i want novels</button>
           <button className="review-frame-buttons">i want short stories</button>
           <button className="review-frame-buttons">tangata whenua only</button> */}
         </div>
