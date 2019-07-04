@@ -47,10 +47,10 @@ function ReviewFrame (props) {
           <Review bookdata={activeTitles[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
-          <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
-          {/* <button className="review-frame-buttons" id="novels" onClick={dispatch(filterTitles('novels'))}>i want novels</button>
-          <button className="review-frame-buttons">i want short stories</button>
-          <button className="review-frame-buttons">tangata whenua only</button> */}
+          <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
+          <button className="review-frame-buttons" id="btn-novels"><h1>i want novels</h1></button>
+          <button className="review-frame-buttons" id="btn-shorts"><h1>i want short stories</h1></button>
+          <button className="review-frame-buttons" id="btn-aotearoa"><h1>aotearoa only!</h1></button>
         </div>
       </div>
 
