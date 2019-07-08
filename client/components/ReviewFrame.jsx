@@ -15,14 +15,14 @@ function ReviewFrame (props) {
 
   // State Two - Random / Novels
   // buttons = everything / stories / poetry / aotearoa
-  function filterTitles(determination) {
+  function filterTitles (determination) {
     activeTitles = []
     titles.map(title => {
       if (title.determination.includes(determination)) {
         activeTitles.push(title)
       }
     })
-    // buttons state reset
+    return activeTitles
   }
   // State Three - Random / Short Stories
   // buttons = everything / novels / poetry / aotearoa
@@ -34,8 +34,6 @@ function ReviewFrame (props) {
   // buttons = everything / novels / stories / poetry
 
   const randomTitle = Math.floor(Math.random() * activeTitles.length)
-
-  // I need a ternary operator to determine whether to display a random title based on whether the state is set to "RANDOM" or to "SPECIFIC"
 
   // I need state changes based on whether the random state offers determinations - ie if the user selects "I want short stories" then only records with the determination "short stories" will be listed in bookdata
 
