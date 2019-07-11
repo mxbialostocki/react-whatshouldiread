@@ -26,7 +26,8 @@ exports.seed = function (knex, Promise) {
         { isbn: 9781590171028, title: `The Island of Horses`, author_first: `Eilis`, author_last: `Dillon`, jacket_image_path: `https://cdn.shopify.com/s/files/1/0726/9203/products/The-Island-of-Horses_2048x2048.jpg?v=1518198775`, publisher: `The New York Review Children’s Collection`, publication_year: 2004, determination: `novel` },
         { isbn: 9781524761103, title: `Orchid & the Wasp`, author_first: `Caoilinn`, author_last: `Hughes`, jacket_image_path: `https://images.booksense.com/images/103/761/9781524761103.jpg`, publisher: `Hogarth`, publication_year: 2018, determination: `novel` },
         { isbn: 9780141987880, title: `My Poems Won't Change the World`, author_first: `Patrizia`, author_last: `Cavalli`, jacket_image_path: `https://www.penguin.co.uk/content/dam/prh/books/308/308623/9780141987880.jpg.transform/PRHDesktopWide_small/image.jpg`, publisher: `Penguin Modern Classics`, publication_year: 2018, determination: `poetry` },
-        { isbn: 9781786894373, title: `The Chronology of Water`, author_first: `Lidia`, author_last: `Yuknavitch`, jacket_image_path: `https://s3-ap-southeast-2.amazonaws.com/assets.allenandunwin.com/images/small/9781786894373.jpg`, publisher: `Canongate`, publication_year: 2019, determination: `memoir` }
+        { isbn: 9781786894373, title: `The Chronology of Water`, author_first: `Lidia`, author_last: `Yuknavitch`, jacket_image_path: `https://s3-ap-southeast-2.amazonaws.com/assets.allenandunwin.com/images/small/9781786894373.jpg`, publisher: `Canongate`, publication_year: 2019, determination: `memoir` },
+        { isbn: 9780747568766, title: `Just Kids`, author_first: `Patti`, author_last: `Smith`, jacket_image_path: `https://img1.od-cdn.com/ImageType-100/0293-1/%7B73471366-5004-4E05-B488-09B28D437BB1%7DImg100.jpg`, publisher: `Ecco`, publication_year: 2010, determination: `memoir` }
       ])
     })
 }
