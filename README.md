@@ -1,7 +1,7 @@
 # react-whatshouldiread
 
 ## what is this?
-whatshouldiread is a web app that upon user interaction returns a really good book recommendation from a heavily curated list of short reviews. If the returned book is not your jam, you can return another random choice, or dictate whether your recommendations are going to be in the arenas of fiction, poetry, or short fiction.
+whatshouldiread is a web app that upon user interaction returns a really good book recommendation from a carefully curated list of short reviews. If the returned book is not your jam, you can return another random choice, or dictate whether your recommendations are going to be in the arenas of novels, poetry, or short fiction.
 
 ergo;
 
@@ -28,13 +28,13 @@ ergo;
 9. a future option includes a related table of New Zealand titles "Just show me Tangata Whenua thanks".
 
 ## Dev to-do list
-[] When title is selected from "covers-all" link to an individual instance of the review
-[] If a book is rejected, it is removed from the redux store list of feasible random titles
+[] When title is selected from "covers-all" link to an individual instance of the review.
+[] If a book is rejected, it is removed from the redux store list of feasible random titles.
 [] User can select what kind of books they want to be shown based on "determination" column using buttons in the ReviewFrame.
-[] // If activeFilter = "novels" then a function will pull only the novels from the redux store
-[] Impliment a UI library to make the basic css redundant
-[] Replace all seed data with original recommendations
-[] Shift the url jacket links to a local store of regulated images
+[] // If activeFilter = "novels" then a function will pull only the novels from the redux store.
+[] Impliment a UI library to make the basic css redundant.
+[] Replace all seed data with original recommendations.
+[] Shift the url jacket links to a local store of regulated images.
 
 ## how does it work?
 React // Redux // Express // Knex
