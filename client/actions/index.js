@@ -8,6 +8,7 @@ export const ACTIVE_PAGE_NOVELS = 'ACTIVE_PAGE_NOVELS'
 export const ACTIVE_PAGE_SHORT_STORIES = 'ACTIVE_PAGE_SHORT_STORIES'
 export const ACTIVE_PAGE_POETRY = 'ACTIVE_PAGE_POETRY'
 export const ACTIVE_PAGE_AOTEAROA = 'ACTIVE_PAGE_AOTEAROA'
+export const ACTIVE_PAGE_MEMOIR = 'ACTIVE_PAGE_MEMOIR'
 
 export const requestTitles = () => {
   return {
@@ -69,5 +70,12 @@ export function activePageAotearoa () {
   return {
     type: ACTIVE_PAGE_AOTEAROA,
     activePage: 'aotearoa'
+  }
+}
+
+export function activePageMemoir () {
+  return {
+    type: ACTIVE_PAGE_MEMOIR,
+    activePage: 'memoir'
   }
 }

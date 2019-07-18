@@ -1,4 +1,4 @@
-import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA } from '../actions'
+import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA, ACTIVE_PAGE_MEMOIR } from '../actions'
 
 function activePage (state = [], action) {
   switch (action.type) {
@@ -13,6 +13,9 @@ function activePage (state = [], action) {
 
     case ACTIVE_PAGE_AOTEAROA:
       return activePage.aotearoa
+
+    case ACTIVE_PAGE_MEMOIR:
+      return activePage.memoir
 
     default:
       return state
