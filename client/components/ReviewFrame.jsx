@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
-import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA } from '../actions/index'
+import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA, ACTIVE_PAGE_MEMOIR } from '../actions/index'
 
 function ReviewFrame (props) {
   // State One - Random / Everything
@@ -13,8 +13,6 @@ function ReviewFrame (props) {
   // let novels = []
   // buttons = novels / stories / poetry / aotearoa
 
-  // State Two - Random / Novels
-  // buttons = everything / stories / poetry / aotearoa
   function filterTitles (determination) {
     activeTitles = []
     titles.map(title => {
@@ -24,14 +22,6 @@ function ReviewFrame (props) {
     })
     return activeTitles
   }
-  // State Three - Random / Short Stories
-  // buttons = everything / novels / poetry / aotearoa
-
-  // State Four - Random / Poetry
-  // buttons = everything / novels / stories / aotearoa
-
-  // State Five - Random / Aotearoa
-  // buttons = everything / novels / stories / poetry
 
   const randomTitle = Math.floor(Math.random() * activeTitles.length)
 
