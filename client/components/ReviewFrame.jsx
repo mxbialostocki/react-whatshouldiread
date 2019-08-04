@@ -4,31 +4,31 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
-import { ACTIVE_PAGE_NOVELS, ACTIVE_PAGE_SHORT_STORIES, ACTIVE_PAGE_POETRY, ACTIVE_PAGE_AOTEAROA, ACTIVE_PAGE_MEMOIR } from '../actions/index'
+import { activePageNovels } from '../actions/index'
 
 function ReviewFrame (props) {
   // State One - Random / Everything
-  const { titles } = props
-  let activeTitles = titles
-  // let novels = []
+  const { titles, activePage, dispatch } = props
   // buttons = novels / stories / poetry / aotearoa
 
   function filterTitles (determination) {
-    activeTitles = []
-    titles.map(title => {
-      if (title.determination.includes(determination)) {
-        activeTitles.push(title)
-      }
-    })
-    return activeTitles
+    console.log(determination)
+    if (determination === "all") {
+      return titles
+    }
+    return titles.filter(title => title.determination.includes(determination))
   }
 
+  let activeTitles = filterTitles(activePage)
+  console.log(activeTitles)
   const randomTitle = Math.floor(Math.random() * activeTitles.length)
-
-  // I need state changes based on whether the random state offers determinations - ie if the user selects "I want short stories" then only records with the determination "short stories" will be listed in bookdata
 
   // I need buttons with an onClick action that sets the state to the determination
 
+
+  // 1. on click dispatches activePageNovels
+  // 2. action returns state
+  // 3. 
   return (
     <React.Fragment>
       <div className="review-frame-container">
@@ -37,7 +37,7 @@ function ReviewFrame (props) {
         </div>
         <div className="review-frame-buttons-container">
           <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
-          <button className="review-frame-buttons" id="btn-novels" onClick={filterTitles('novel')}><Link to="/books/review"><h1>i want novels</h1></Link></button>
+          <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
           <button className="review-frame-buttons" id="btn-shorts"><h1>i want short stories</h1></button>
           <button className="review-frame-buttons" id="btn-aotearoa"><h1>aotearoa only!</h1></button>
         </div>
