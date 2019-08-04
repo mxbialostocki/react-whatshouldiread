@@ -4,27 +4,41 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
+import { activePageNovels, activePageShortStories } from '../actions/index'
+
 function ReviewFrame (props) {
-  const { titles } = props
-  const randomTitle = Math.floor(Math.random() * titles.length)
+  // State One - Random / Everything
+  const { titles, activePage, dispatch } = props
+  // buttons = novels / stories / poetry / aotearoa
 
-  // I need a ternary operator to determine whether to display a random title based on whether the state is set to "RANDOM" or to "SPECIFIC"
+  function filterTitles (determination) {
+    console.log(determination)
+    if (determination === "all") {
+      return titles
+    }
+    return titles.filter(title => title.determination.includes(determination))
+  }
 
-  // I need state changes based on whether the random state offers determinations - ie if the user selects "I want short stories" then only records with the determination "short stories" will be listed in bookdata
+  let activeTitles = filterTitles(activePage)
+  console.log(activeTitles)
+  const randomTitle = Math.floor(Math.random() * activeTitles.length)
 
   // I need buttons with an onClick action that sets the state to the determination
 
+  // 1. on click dispatches activePageNovels
+  // 2. action returns state
+  // 3. 
   return (
     <React.Fragment>
       <div className="review-frame-container">
         <div>
-          <Review bookdata={titles[randomTitle]}/>
+          <Review bookdata={activeTitles[randomTitle]}/>
         </div>
         <div className="review-frame-buttons-container">
-          <h1 className="review-frame-buttons"><Link to="/books/review">not this one</Link></h1>
-          {/* <button className="review-frame-buttons">i want poetry</button>
-          <button className="review-frame-buttons">i want short stories</button>
-          <button className="review-frame-buttons">tangata whenua only</button> */}
+          <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
+          <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
+          <button className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></button>
+          <button className="review-frame-buttons" id="btn-aotearoa"><h1>aotearoa only!</h1></button>
         </div>
       </div>
 
@@ -34,7 +48,8 @@ function ReviewFrame (props) {
 
 function mapStateToProps (state) {
   return {
-    titles: state.retrieveAllTitles
+    titles: state.retrieveAllTitles,
+    activePage: state.activePage
   }
 }
 
