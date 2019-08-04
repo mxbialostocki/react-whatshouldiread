@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
-import { activePageNovels } from '../actions/index'
+import { activePageNovels, activePageShortStories } from '../actions/index'
 
 function ReviewFrame (props) {
   // State One - Random / Everything
@@ -25,7 +25,6 @@ function ReviewFrame (props) {
 
   // I need buttons with an onClick action that sets the state to the determination
 
-
   // 1. on click dispatches activePageNovels
   // 2. action returns state
   // 3. 
@@ -38,7 +37,7 @@ function ReviewFrame (props) {
         <div className="review-frame-buttons-container">
           <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
           <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
-          <button className="review-frame-buttons" id="btn-shorts"><h1>i want short stories</h1></button>
+          <button className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></button>
           <button className="review-frame-buttons" id="btn-aotearoa"><h1>aotearoa only!</h1></button>
         </div>
       </div>

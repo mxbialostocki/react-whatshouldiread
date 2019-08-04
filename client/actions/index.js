@@ -4,11 +4,11 @@ export const RETRIEVE_ALL_TITLES = 'RETRIEVE_ALL_TITLES'
 export const RECIEVE_TITLES = 'RECIEVE_TITLES'
 export const REQUEST_TITLES = 'REQUEST_TITLES'
 export const SHOW_ERROR = 'SHOW_ERROR'
-export const ACTIVE_PAGE_NOVELS = 'ACTIVE_PAGE_NOVELS'
-export const ACTIVE_PAGE_SHORT_STORIES = 'ACTIVE_PAGE_SHORT_STORIES'
-export const ACTIVE_PAGE_POETRY = 'ACTIVE_PAGE_POETRY'
-export const ACTIVE_PAGE_AOTEAROA = 'ACTIVE_PAGE_AOTEAROA'
-export const ACTIVE_PAGE_MEMOIR = 'ACTIVE_PAGE_MEMOIR'
+export const UPDATE_ACTIVE_PAGE = 'UPDATE_ACTIVE_PAGE'
+// export const ACTIVE_PAGE_SHORT_STORIES = 'ACTIVE_PAGE_SHORT_STORIES'
+// export const ACTIVE_PAGE_POETRY = 'ACTIVE_PAGE_POETRY'
+// export const ACTIVE_PAGE_AOTEAROA = 'ACTIVE_PAGE_AOTEAROA'
+// export const ACTIVE_PAGE_MEMOIR = 'ACTIVE_PAGE_MEMOIR'
 
 export const requestTitles = () => {
   return {
@@ -47,35 +47,35 @@ export function retrieveAllTitles () {
 
 export function activePageNovels () {
   return {
-    type: ACTIVE_PAGE_NOVELS,
-    activePage: 'novels'
+    type: UPDATE_ACTIVE_PAGE,
+    activePage: 'novel'
   }
 }
 
 export function activePageShortStories () {
   return {
-    type: ACTIVE_PAGE_SHORT_STORIES,
-    activePage: 'short-stories'
+    type: UPDATE_ACTIVE_PAGE,
+    activePage: 'stories'
   }
 }
 
 export function activePagePoetry () {
   return {
-    type: ACTIVE_PAGE_POETRY,
+    type: UPDATE_ACTIVE_PAGE,
     activePage: 'poetry'
   }
 }
 
 export function activePageAotearoa () {
   return {
-    type: ACTIVE_PAGE_AOTEAROA,
+    type: UPDATE_ACTIVE_PAGE,
     activePage: 'aotearoa'
   }
 }
 
 export function activePageMemoir () {
   return {
-    type: ACTIVE_PAGE_MEMOIR,
+    type: UPDATE_ACTIVE_PAGE,
     activePage: 'memoir'
   }
 }
