@@ -7,27 +7,24 @@ import Review from './Review'
 import { activePageNovels, activePageShortStories, activePagePoetry, activePageAotearoa, activePageMemoir } from '../actions/index'
 
 function ReviewFrame (props) {
-  // State One - Random / Everything
   const { titles, activePage, dispatch } = props
-  // buttons = novels / stories / poetry / aotearoa
+
+  // preen list of activeTitles according to determination: if determination is all, offer all reviews
 
   function filterTitles (determination) {
-    console.log(determination)
     if (determination === "all") {
       return titles
     }
     return titles.filter(title => title.determination.includes(determination))
   }
 
+  // let the active titles be determined by the activePage
+
   let activeTitles = filterTitles(activePage)
-  console.log(activeTitles)
+  // console.log(activeTitles)
+  // select a title at random based on index
   const randomTitle = Math.floor(Math.random() * activeTitles.length)
 
-  // I need buttons with an onClick action that sets the state to the determination
-
-  // 1. on click dispatches activePageNovels
-  // 2. action returns state
-  // 3. 
   return (
     <React.Fragment>
       <div className="review-frame-container">
