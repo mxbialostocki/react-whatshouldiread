@@ -5,10 +5,6 @@ export const RECIEVE_TITLES = 'RECIEVE_TITLES'
 export const REQUEST_TITLES = 'REQUEST_TITLES'
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const UPDATE_ACTIVE_PAGE = 'UPDATE_ACTIVE_PAGE'
-// export const ACTIVE_PAGE_SHORT_STORIES = 'ACTIVE_PAGE_SHORT_STORIES'
-// export const ACTIVE_PAGE_POETRY = 'ACTIVE_PAGE_POETRY'
-// export const ACTIVE_PAGE_AOTEAROA = 'ACTIVE_PAGE_AOTEAROA'
-// export const ACTIVE_PAGE_MEMOIR = 'ACTIVE_PAGE_MEMOIR'
 
 export const requestTitles = () => {
   return {
