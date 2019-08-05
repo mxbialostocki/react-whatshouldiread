@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import Review from './Review'
 
-import { activePageNovels, activePageShortStories } from '../actions/index'
+import { activePageNovels, activePageShortStories, activePagePoetry } from '../actions/index'
 
 function ReviewFrame (props) {
   // State One - Random / Everything
@@ -38,7 +38,7 @@ function ReviewFrame (props) {
           <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
           <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
           <button className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></button>
-          <button className="review-frame-buttons" id="btn-aotearoa"><h1>aotearoa only!</h1></button>
+          <button className="review-frame-buttons" id="btn-poetry" onClick={() => dispatch(activePagePoetry())}><h1>poetry only</h1></button>
         </div>
       </div>
 
