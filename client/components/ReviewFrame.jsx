@@ -12,7 +12,7 @@ function ReviewFrame (props) {
   // preen list of activeTitles according to determination: if determination is all, offer all reviews
 
   function filterTitles (determination) {
-    if (determination === "all") {
+    if (determination === 'all') {
       return titles
     }
     return titles.filter(title => title.determination.includes(determination))
