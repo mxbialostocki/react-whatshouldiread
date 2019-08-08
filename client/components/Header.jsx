@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { activePageAll } from '../actions/index'
 
 function Header (props) {
-  const { dispatch, activePage } = props
+  const { dispatch } = props
 
   return (
     <div>
