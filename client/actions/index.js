@@ -41,6 +41,13 @@ export function retrieveAllTitles () {
 
 // State actions to change Active Page based on determination
 
+export function activePageAll () {
+  return {
+    type: UPDATE_ACTIVE_PAGE,
+    activePage: 'all'
+  }
+}
+
 export function activePageNovels () {
   return {
     type: UPDATE_ACTIVE_PAGE,
