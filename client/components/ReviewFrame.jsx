@@ -12,7 +12,7 @@ function ReviewFrame (props) {
   // preen list of activeTitles according to determination: if determination is all, offer all reviews
 
   function filterTitles (determination) {
-    if (determination === "all") {
+    if (determination === 'all') {
       return titles
     }
     return titles.filter(title => title.determination.includes(determination))
@@ -36,7 +36,7 @@ function ReviewFrame (props) {
           <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
           <button className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></button>
           <button className="review-frame-buttons" id="btn-poetry" onClick={() => dispatch(activePagePoetry())}><h1>poetry only</h1></button>
-          <button className="review-frame-buttons" id="btn-aotearoa" onClick={() => dispatch(activePageAotearoa())}><h1>aoteaora</h1></button>
+          <button className="review-frame-buttons" id="btn-aotearoa" onClick={() => dispatch(activePageAotearoa())}><h1>aotearoa</h1></button>
           <button className="review-frame-buttons" id="btn-memoir" onClick={() => dispatch(activePageMemoir())}><h1>memoir please</h1></button>
         </div>
       </div>
