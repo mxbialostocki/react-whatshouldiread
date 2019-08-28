@@ -31,14 +31,14 @@ function ReviewFrame (props) {
         <div>
           <Review bookdata={activeTitles[randomTitle]}/>
         </div>
-        <div className="review-frame-buttons-container">
-          <button className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></button>
-          <button className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></button>
-          <button className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></button>
-          <button className="review-frame-buttons" id="btn-poetry" onClick={() => dispatch(activePagePoetry())}><h1>poetry only</h1></button>
-          <button className="review-frame-buttons" id="btn-aotearoa" onClick={() => dispatch(activePageAotearoa())}><h1>aotearoa</h1></button>
-          <button className="review-frame-buttons" id="btn-memoir" onClick={() => dispatch(activePageMemoir())}><h1>memoir please</h1></button>
-        </div>
+        <ul className="review-frame-buttons-container">
+          <li className="review-frame-buttons"><Link to="/books/review"><h1>not this one</h1></Link></li>
+          <li className="review-frame-buttons" id="btn-novels" onClick={() => dispatch(activePageNovels())}><h1>i want novels</h1></li>
+          <li className="review-frame-buttons" id="btn-shorts" onClick={() => dispatch(activePageShortStories())}><h1>i want short stories</h1></li>
+          <li className="review-frame-buttons" id="btn-poetry" onClick={() => dispatch(activePagePoetry())}><h1>poetry only</h1></li>
+          <li className="review-frame-buttons" id="btn-aotearoa" onClick={() => dispatch(activePageAotearoa())}><h1>aotearoa</h1></li>
+          <li className="review-frame-buttons" id="btn-memoir" onClick={() => dispatch(activePageMemoir())}><h1>memoir please</h1></li>
+        </ul>
       </div>
 
     </React.Fragment>
